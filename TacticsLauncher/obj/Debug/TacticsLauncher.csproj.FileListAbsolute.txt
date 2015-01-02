@@ -1,0 +1,16 @@
+c:\users\pavero\documents\visual studio 2013\Projects\TacticsLauncher\TacticsLauncher\bin\Debug\TacticsLauncher.exe.config
+c:\users\pavero\documents\visual studio 2013\Projects\TacticsLauncher\TacticsLauncher\bin\Debug\TacticsLauncher.exe
+c:\users\pavero\documents\visual studio 2013\Projects\TacticsLauncher\TacticsLauncher\bin\Debug\TacticsLauncher.pdb
+c:\users\pavero\documents\visual studio 2013\Projects\TacticsLauncher\TacticsLauncher\obj\Debug\MainWindow.baml
+c:\users\pavero\documents\visual studio 2013\Projects\TacticsLauncher\TacticsLauncher\obj\Debug\MainWindow.g.cs
+c:\users\pavero\documents\visual studio 2013\Projects\TacticsLauncher\TacticsLauncher\obj\Debug\App.g.cs
+c:\users\pavero\documents\visual studio 2013\Projects\TacticsLauncher\TacticsLauncher\obj\Debug\TacticsLauncher_MarkupCompile.cache
+c:\users\pavero\documents\visual studio 2013\Projects\TacticsLauncher\TacticsLauncher\obj\Debug\TacticsLauncher.g.resources
+c:\users\pavero\documents\visual studio 2013\Projects\TacticsLauncher\TacticsLauncher\obj\Debug\TacticsLauncher.Properties.Resources.resources
+c:\users\pavero\documents\visual studio 2013\Projects\TacticsLauncher\TacticsLauncher\obj\Debug\TacticsLauncher.csproj.GenerateResource.Cache
+c:\users\pavero\documents\visual studio 2013\Projects\TacticsLauncher\TacticsLauncher\obj\Debug\TacticsLauncher.exe
+c:\users\pavero\documents\visual studio 2013\Projects\TacticsLauncher\TacticsLauncher\obj\Debug\TacticsLauncher.pdb
+c:\users\pavero\documents\visual studio 2013\Projects\TacticsLauncher\TacticsLauncher\obj\Debug\TacticsLauncher.csprojResolveAssemblyReference.cache
+C:\Users\Pavero\Source\Repos\TacticsLauncher\TacticsLauncher\bin\Debug\TacticsLauncher.exe.config
+C:\Users\Pavero\Source\Repos\TacticsLauncher\TacticsLauncher\obj\Debug\TacticsLauncher.exe
+C:\Users\Pavero\Source\Repos\TacticsLauncher\TacticsLauncher\obj\Debug\TacticsLauncher.pdb
