@@ -14,3 +14,13 @@ c:\users\pavero\documents\visual studio 2013\Projects\TacticsLauncher\TacticsLau
 C:\Users\Pavero\Source\Repos\TacticsLauncher\TacticsLauncher\bin\Debug\TacticsLauncher.exe.config
 C:\Users\Pavero\Source\Repos\TacticsLauncher\TacticsLauncher\obj\Debug\TacticsLauncher.exe
 C:\Users\Pavero\Source\Repos\TacticsLauncher\TacticsLauncher\obj\Debug\TacticsLauncher.pdb
+C:\Users\Pavero\Source\Repos\TacticsLauncher\TacticsLauncher\bin\Debug\TacticsLauncher.exe
+C:\Users\Pavero\Source\Repos\TacticsLauncher\TacticsLauncher\bin\Debug\TacticsLauncher.pdb
+C:\Users\Pavero\Source\Repos\TacticsLauncher\TacticsLauncher\obj\Debug\MainWindow.baml
+C:\Users\Pavero\Source\Repos\TacticsLauncher\TacticsLauncher\obj\Debug\MainWindow.g.cs
+C:\Users\Pavero\Source\Repos\TacticsLauncher\TacticsLauncher\obj\Debug\App.g.cs
+C:\Users\Pavero\Source\Repos\TacticsLauncher\TacticsLauncher\obj\Debug\TacticsLauncher_MarkupCompile.cache
+C:\Users\Pavero\Source\Repos\TacticsLauncher\TacticsLauncher\obj\Debug\TacticsLauncher.g.resources
+C:\Users\Pavero\Source\Repos\TacticsLauncher\TacticsLauncher\obj\Debug\TacticsLauncher.Properties.Resources.resources
+C:\Users\Pavero\Source\Repos\TacticsLauncher\TacticsLauncher\obj\Debug\TacticsLauncher.csproj.GenerateResource.Cache
+C:\Users\Pavero\Source\Repos\TacticsLauncher\TacticsLauncher\bin\Debug\Microsoft.Windows.Shell.dll

@@ -23,12 +23,21 @@ namespace TacticsLauncher
     /// </summary>
     public partial class MainWindow : Window
     {
-        
-        public MainWindow()
+        enum TabSelector
+        {
+            settings,
+            update,
+            news
+        };
+
+        private TabSelector _tabSelector ;
+
+    public MainWindow()
         {
             InitializeComponent();
         }
 
+        //Windows controls
         private void closeButton_Click(object sender, RoutedEventArgs e)
         {
             MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Are you sure want to close Launcher?", "Exit Confirmation", System.Windows.MessageBoxButton.YesNo);
@@ -39,6 +48,7 @@ namespace TacticsLauncher
             Application.Current.MainWindow.WindowState = WindowState.Minimized;
         }
 
+        //Links
         private void websiteLink_Click(object sender, RoutedEventArgs e)
         {
             System.Diagnostics.Process.Start("http://warofthering.ru");
@@ -54,6 +64,53 @@ namespace TacticsLauncher
         private void vkLink_Click(object sender, RoutedEventArgs e)
         {
             System.Diagnostics.Process.Start("http://vk.com/bfmetactics");
+        }
+
+        //Launcher controls
+        private void play_Click(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://warofthering.ru");
+        }
+        private void settingsTab_Click(object sender, RoutedEventArgs e)
+        {
+            _tabSelector = TabSelector.settings;
+            showTabFrame();
+        }
+        private void updateTab_Click(object sender, RoutedEventArgs e)
+        {
+            _tabSelector = TabSelector.update;
+            showTabFrame();
+        }
+        private void newsTab_Click(object sender, RoutedEventArgs e)
+        {
+            _tabSelector = TabSelector.news;
+            showTabFrame();
+        }
+
+        private void showTabFrame()
+        {
+            Image settingsFrame = button_open;
+            Image updateFrame = Layer_54_copy;
+            Image newsFrame = button_open1;
+            switch (_tabSelector)
+            {
+                case TabSelector.settings:
+                    settingsFrame.Opacity = 1;
+                    updateFrame.Opacity = 0;
+                    newsFrame.Opacity = 0;
+                    break;
+                case TabSelector.update:
+                    settingsFrame.Opacity = 0;
+                    updateFrame.Opacity = 1;
+                    newsFrame.Opacity = 0;
+                    break;
+                case TabSelector.news:
+                    settingsFrame.Opacity = 0;
+                    updateFrame.Opacity = 0;
+                    newsFrame.Opacity = 1;
+                    break;
+            }
+            
         }
     }
 }

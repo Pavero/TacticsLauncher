@@ -2,7 +2,7 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="TacticsLauncher.MainWindow"
-        Title="MainWindow" Height="571" Width="960.639"  WindowStyle="None" ResizeMode="NoResize">
+        Title="MainWindow" Height="571" Width="960.639"  WindowStyle="None" ResizeMode="NoResize" AllowsTransparency="True">
     <WindowChrome.WindowChrome>
         <WindowChrome CaptionHeight="20" GlassFrameThickness="0 0 0 1" />
     </WindowChrome.WindowChrome>
@@ -40,7 +40,7 @@
             <Image x:Name="Background" Height="572" Canvas.Left="0" Source="laucher_final2_Images\Background.png" Canvas.Top="0" Width="961"/>
             <Image x:Name="Layer_53" Height="572" Canvas.Left="0" Source="laucher_final2_Images\Layer 53.png" Canvas.Top="0" Width="961"/>
             <Canvas x:Name="NEWS_menu" Height="377" Canvas.Left="149" Canvas.Top="105" Width="331">
-                <Image x:Name="Layer_13" Height="377" Canvas.Left="0" Source="laucher_final2_Images\Layer 131.png" Canvas.Top="0" Width="331"/>
+                <Image x:Name="Layer_13" Opacity="0.75" Height="377" Canvas.Left="0" Source="laucher_final2_Images\Layer 131.png" Canvas.Top="0" Width="331"/>
                 <TextBlock x:Name="_02_01_2015_Beta_is_coming__beta_beta_beta_beta_beta____04_01_20" Foreground="#FFFDFDFD" FontFamily="Micra" Height="292" IsHyphenationEnabled="True" LineStackingStrategy="BlockLineHeight" Canvas.Left="16.683" LineHeight="12" TextAlignment="Left" TextWrapping="Wrap" Canvas.Top="53.764" Width="287"><Run FontSize="12" Text="02.01.2015&#xA;Beta is coming!&#xA;"/><Run FontSize="9" Text="beta-beta-beta-beta-beta&#xA;"/><Run FontSize="12" Text="&#xA;&#xA;&#xA;04.01.2015&#xA;New update!&#xA;"/><Run FontSize="9" Text="beta-beta-beta-beta-beta&#xA;"/><Run FontSize="12" Text="&#xA;&#xA;&#xA;10.01.2015&#xA;New Update! Elven faction&#xA;"/><Run FontSize="9" Text="beta-beta-beta-beta"/></TextBlock>
                 <Image x:Name="Layer_39" Height="25" Canvas.Left="7" Source="laucher_final2_Images\Layer 39.png" Canvas.Top="11" Width="109"/>
                 <Image x:Name="Layer_38" Height="327" Canvas.Left="313" Source="laucher_final2_Images\Layer 38.png" Canvas.Top="44" Width="10"/>
@@ -72,22 +72,70 @@
                 <TextBlock x:Name="_1600_900" FontSize="14" FontFamily="Micra" Height="15" IsHyphenationEnabled="True" LineStackingStrategy="BlockLineHeight" Canvas.Left="144.967" LineHeight="14" TextAlignment="Left" TextWrapping="Wrap" Text="1600-900" Canvas.Top="112.984" Width="120"/>
             </Canvas>
             <Canvas x:Name="play" Height="77" Canvas.Left="11" Canvas.Top="98" Width="83">
-                <Image x:Name="on_play" Height="77" Canvas.Left="0" Source="laucher_final2_Images\on_play.png" Canvas.Top="0" Width="83" d:IsHidden="True"/>
-                <Image x:Name="off_play" Height="71" Canvas.Left="3" Source="laucher_final2_Images\off_play.png" Canvas.Top="3" Width="77"/>
+                <Button x:Name="PlayButton" Height="71" Canvas.Left="3" Style="{DynamicResource NoChromeButton}" Click="play_Click" Canvas.Top="3" Width="77">
+                    <Image x:Name="off_play">
+                        <Image.Style>
+                            <Style TargetType="{x:Type Image}">
+                                <Setter Property="Source" Value="laucher_final2_Images\off_play.png"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Source" Value="laucher_final2_Images\on_play.png"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Image.Style>
+                    </Image>
+                </Button>
             </Canvas>
             <Canvas x:Name="settings" Height="95" Canvas.Left="3" Canvas.Top="217" Width="95">
-                <Image x:Name="button_open" Height="92" Canvas.Left="1" Source="laucher_final2_Images\button_open1.png" Canvas.Top="0" Width="92" d:IsHidden="True"/>
-                <Image x:Name="on_options" Height="95" Canvas.Left="0" Source="laucher_final2_Images\on_options.png" Canvas.Top="0" Width="95" d:IsHidden="True"/>
-                <Image x:Name="off_options_copy_2" Height="88" Canvas.Left="2" Source="laucher_final2_Images\off_options copy 2.png" Canvas.Top="4" Width="90"/>
+                <Image x:Name="button_open" Opacity="0" Height="92" Canvas.Left="1" Source="laucher_final2_Images\button_open1.png" Canvas.Top="0" Width="92" d:IsHidden="True"/>
+                <Button x:Name="SettingsButton" Height="88" Canvas.Left="2" Style="{DynamicResource NoChromeButton}" Click="settingsTab_Click" Canvas.Top="4" Width="90">
+                    <Image x:Name="off_options_copy_2">
+                        <Image.Style>
+                            <Style TargetType="{x:Type Image}">
+                                <Setter Property="Source" Value="laucher_final2_Images\off_options copy 2.png"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Source" Value="laucher_final2_Images\on_options.png"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Image.Style>
+                    </Image>
+                </Button>
             </Canvas>
             <Canvas x:Name="update" Height="94" Canvas.Left="2" Canvas.Top="339" Width="98">
-                <Image x:Name="Layer_54_copy" Height="92" Canvas.Left="2" Source="laucher_final2_Images\Layer 54 copy.png" Canvas.Top="0" Width="92" d:IsHidden="True"/>
-                <Image x:Name="update_on" Height="93" Canvas.Left="0" Source="laucher_final2_Images\update_on.png" Canvas.Top="1" Width="98" d:IsHidden="True"/>
-                <Image x:Name="update_off_copy" Height="87" Canvas.Left="2" Source="laucher_final2_Images\update_off copy.png" Canvas.Top="4" Width="94"/>
+                <Image x:Name="Layer_54_copy" Opacity="0"  Height="92" Canvas.Left="2" Source="laucher_final2_Images\Layer 54 copy.png" Canvas.Top="0" Width="92"/>
+                <Button x:Name="UpdateButton" Height="87" Canvas.Left="2" Style="{DynamicResource NoChromeButton}" Click="updateTab_Click" Canvas.Top="4" Width="94">
+                    <Image x:Name="update_off_copy">
+                        <Image.Style>
+                            <Style TargetType="{x:Type Image}">
+                                <Setter Property="Source" Value="laucher_final2_Images\update_off copy.png"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Source" Value="laucher_final2_Images\update_on.png"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Image.Style>
+                    </Image>
+                </Button>
             </Canvas>
             <Image x:Name="button_open1" Height="92" Canvas.Left="4" Source="laucher_final2_Images\button_open.png" Canvas.Top="465" Width="92"/>
-            <Image x:Name="on" Height="87" Canvas.Left="9" Source="laucher_final2_Images\on.png" Canvas.Top="472" Width="85" d:IsHidden="True"/>
-            <Image x:Name="off" Height="81" Canvas.Left="12" Source="laucher_final2_Images\off.png" Canvas.Top="475" Width="79"/>
+            <Button x:Name="NewsButton" Height="81" Canvas.Left="12" Style="{DynamicResource NoChromeButton}" Click="newsTab_Click" Canvas.Top="475" Width="79">
+                <Image x:Name="off">
+                    <Image.Style>
+                        <Style TargetType="{x:Type Image}">
+                            <Setter Property="Source" Value="laucher_final2_Images\off.png"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Source" Value="laucher_final2_Images\on.png"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Image.Style>
+                </Image>
+            </Button>
             <Image x:Name="Layer_40_copy" Height="22" Canvas.Left="110" Source="laucher_final2_Images\Layer 40 copy.png" Canvas.Top="508" Width="152"/>
             <Image x:Name="Layer_34_copy_2" Height="8" Canvas.Left="244" Source="laucher_final2_Images\Layer 34 copy 2.png" Canvas.Top="515" Width="9"/>
             <TextBlock x:Name="english_copy" FontSize="14" FontFamily="Micra" Height="13" IsHyphenationEnabled="True" LineStackingStrategy="BlockLineHeight" Canvas.Left="116.967" LineHeight="14" TextAlignment="Left" TextWrapping="Wrap" Text="english" Canvas.Top="513.984" Width="96"/>
